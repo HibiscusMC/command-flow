@@ -173,7 +173,7 @@ public class SimpleArgumentStack implements ArgumentStack {
             throw new ArgumentParseException(
                 Component.translatable(
                     "invalid.integer"
-                ).args(Component.text(next))
+                ).arguments(Component.text(next))
             );
         }
     }
@@ -188,7 +188,7 @@ public class SimpleArgumentStack implements ArgumentStack {
             throw new ArgumentParseException(
                 Component.translatable(
                     "invalid.float"
-                ).args(Component.text(next))
+                ).arguments(Component.text(next))
             );
         }
     }
@@ -203,7 +203,7 @@ public class SimpleArgumentStack implements ArgumentStack {
             throw new ArgumentParseException(
                 Component.translatable(
                     "invalid.double"
-                ).args(Component.text(next))
+                ).arguments(Component.text(next))
             );
         }
     }
@@ -218,7 +218,7 @@ public class SimpleArgumentStack implements ArgumentStack {
             throw new ArgumentParseException(
                 Component.translatable(
                     "invalid.byte"
-                ).args(Component.text(next))
+                ).arguments(Component.text(next))
             );
         }
     }
@@ -231,7 +231,7 @@ public class SimpleArgumentStack implements ArgumentStack {
             throw new ArgumentParseException(
                 Component.translatable(
                     "invalid.boolean"
-                ).args(Component.text(next))
+                ).arguments(Component.text(next))
             );
         }
 
@@ -248,7 +248,7 @@ public class SimpleArgumentStack implements ArgumentStack {
             throw new ArgumentParseException(
               Component.translatable(
                 "invalid.long"
-              ).args(Component.text(next))
+              ).arguments(Component.text(next))
             );
         }
     }

@@ -41,7 +41,7 @@ public class LongPart extends PrimitivePart {
 		if (ranged && (next > max || next < min)) {
 			throw new ArgumentParseException(
 					Component.translatable("number.out-range")
-							.args(
+							.arguments(
 									Component.text(next),
 									Component.text(min),
 									Component.text(max)

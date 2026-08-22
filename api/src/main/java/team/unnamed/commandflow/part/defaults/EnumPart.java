@@ -69,7 +69,7 @@ public class EnumPart extends PrimitivePart {
 
         if (value == null) {
             Component message = Component.translatable("invalid.enum-value")
-                    .args(
+                    .arguments(
                             Component.text(name),
                             Component.text(joinedEnumConstants)
                     );

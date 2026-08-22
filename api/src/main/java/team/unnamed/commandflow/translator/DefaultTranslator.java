@@ -1,5 +1,6 @@
 package team.unnamed.commandflow.translator;
 
+import net.kyori.adventure.text.TranslationArgument;
 import team.unnamed.commandflow.Namespace;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TextComponent;
@@ -86,7 +87,7 @@ public class DefaultTranslator implements Translator {
             builder.match(FORMAT)
                     .replacement((matcher, builder1) -> {
                         String formatCode = matcher.group(2);
-                        List<Component> args = component.args();
+                        List<TranslationArgument> args = component.arguments();
 
                         switch (formatCode.charAt(0)) {
                             case 's':
@@ -96,7 +97,7 @@ public class DefaultTranslator implements Translator {
                                 int withIndexInt = withIndex != null ? Integer.parseInt(withIndex) - 1 : iw[0]++;
 
                                 if (args.size() > withIndexInt) {
-                                    Component component1 = args.get(withIndexInt);
+                                    Component component1 = args.get(withIndexInt).asComponent();
 
                                     return component1 instanceof TextComponent ? component1 : _translate(component, namespace);
                                 } else {

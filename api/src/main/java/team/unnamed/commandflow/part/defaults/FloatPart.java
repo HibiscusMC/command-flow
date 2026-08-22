@@ -37,7 +37,7 @@ public class FloatPart extends PrimitivePart {
     public List<Float> parseValue(CommandContext context, ArgumentStack stack, CommandPart parent) throws ArgumentParseException {
         float next = stack.nextFloat();
         if (ranged && (next > max || next < min)) {
-            Component message = Component.translatable("number.out-range").args(Component.text(next), Component.text(min), Component.text(max));
+            Component message = Component.translatable("number.out-range").arguments(Component.text(next), Component.text(min), Component.text(max));
 
             throw new ArgumentParseException(message);
         }

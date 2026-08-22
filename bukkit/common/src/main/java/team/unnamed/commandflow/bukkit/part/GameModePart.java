@@ -52,7 +52,7 @@ public class GameModePart implements ArgumentPart {
         GameMode possibleGameMode = GAMEMODE_ALIASES.get(possibleGameModeName);
 
         if (possibleGameMode == null) {
-            throw new ArgumentParseException(Component.translatable("invalid.gamemode").args(Component.text(possibleGameModeName)));
+            throw new ArgumentParseException(Component.translatable("invalid.gamemode").arguments(Component.text(possibleGameModeName)));
         }
 
         return Collections.singletonList(possibleGameMode);

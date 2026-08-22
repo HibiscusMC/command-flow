@@ -12,7 +12,7 @@ public class NoMoreArgumentsException extends ArgumentException {
     }
 
     public NoMoreArgumentsException(int size, int position) {
-        super(Component.translatable("argument.no-more").args(Component.text(size), Component.text(position)));
+        super(Component.translatable("argument.no-more").arguments(Component.text(size), Component.text(position)));
     }
 
     public NoMoreArgumentsException(Component message) {
